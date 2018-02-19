@@ -1,28 +1,29 @@
 public class FishingRod {
+    public static double TotalPrices;
     private String model;
     private String type;
     private double price;
     private double length;
     private double weight;
-    public static double TotalPrices;
 
 
+    public FishingRod(){}
 
-    FishingRod(){}
-
-    FishingRod(String model, String type, double price, double length){
+    public FishingRod(String model, String type, double price, double length){
         this.model = model;
         this.type = type;
         this.price= price;
         this.length = length;
+        TotalPrices += price;
     }
 
-    FishingRod(String model, String type, double price, double length, double weight){
+    public FishingRod(String model, String type, double price, double length, double weight){
         this.model = model;
         this.type = type;
         this.price= price;
         this.length = length;
         this.weight = weight;
+        TotalPrices += price;
     }
 
     public String toString(){
@@ -38,7 +39,6 @@ public class FishingRod {
         System.out.println("Fishing rod: " + model + " type: " + type + " price is: " + price);
     }
 
-
     public String getModel() {
         return model;
     }
@@ -47,16 +47,16 @@ public class FishingRod {
         this.model = model;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     public double getLength() {
         return length;
     }
 
     public void setLength(double length) {
         this.length = length;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public void setPrice(double price) {
@@ -88,6 +88,4 @@ public class FishingRod {
         setWeight(weight);
         TotalPrices += price;
     }
-
-
 }
