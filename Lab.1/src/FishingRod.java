@@ -1,5 +1,5 @@
 public class FishingRod {
-    public static double TotalPrices;
+    public static double totalPrices;
     private String model;
     private String type;
     private double price;
@@ -14,7 +14,7 @@ public class FishingRod {
         this.type = type;
         this.price= price;
         this.length = length;
-        TotalPrices += price;
+        totalPrices += price;
     }
 
     public FishingRod(String model, String type, double price, double length, double weight){
@@ -23,7 +23,7 @@ public class FishingRod {
         this.price= price;
         this.length = length;
         this.weight = weight;
-        TotalPrices += price;
+        totalPrices += price;
     }
 
     public String toString(){
@@ -32,7 +32,7 @@ public class FishingRod {
     }
 
     static void prinStaticPrice(){
-        System.out.println("Fishing Rods total price is: " + TotalPrices + " USD");
+        System.out.println("Fishing Rods total price is: " + totalPrices + " USD");
     }
 
     public void printSum() {
@@ -80,12 +80,12 @@ public class FishingRod {
     }
 
     public void resetValues(String model, String type, int price, double length, double weight) {
-        TotalPrices -= this.price;
+        totalPrices -= this.price;
         setModel(model);
         setType(type);
         setPrice(price);
         setLength(length);
         setWeight(weight);
-        TotalPrices += price;
+        totalPrices += price;
     }
 }
