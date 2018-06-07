@@ -1,0 +1,39 @@
+class Restaurant:
+    __name = "restor"
+    __capacity, __stars, __staff = 0, 0, 0
+    __food_type = "local"
+    __total_staff = 0
+
+    def __init__(self, name = "restor", capacity=0, stars=0,staff=0, food_type="local"):
+        self.__name = name
+        self.__capacity = capacity
+        self.__stars = stars
+        self.__staff = staff
+        self.__food_type = food_type
+        Restaurant.__total_staff += self.__staff
+
+    def to_string(self):
+        print("Name: " + self.__name + ", stars: " + str(self.__stars) + ", capacity" + str(self.__capacity)
+              + ", food type: " + str(self.__food_type) + " , staff:" + str(self.__staff))
+
+    def print_sum(self):
+        print("Restaurant " + self.__name + " has total staff members of " + str(self.__staff))
+
+    @staticmethod
+    def print_static_sum():
+        print("Total staff members of all restaurants is " + str(Restaurant.__total_staff))
+
+
+if __name__ == '__main__':
+    laFamilia = Restaurant()
+    celentano = Restaurant("Celentano", 50, 0, 10)
+    hide = Restaurant("Hide", 125, 3, 30, "molecular")
+
+    laFamilia.to_string()
+    celentano.to_string()
+    hide.to_string()
+
+    Restaurant.print_static_sum()
+    celentano.print_sum()
+    hide.print_sum()
+
