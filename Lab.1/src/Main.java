@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args){
-
         FishingRod fish = new FishingRod();
         FishingRod ribka = new FishingRod("The Amazing","Sporty",200,14);
         FishingRod shark = new FishingRod("White Shark", "Amature",300,20,4);
@@ -18,8 +17,5 @@ public class Main {
         shark.setPrice(180);
 
         FishingRod.prinStaticPrice();
-
-
-
     }
 }
