@@ -6,7 +6,6 @@ public class FishingRod {
     private double length;
     private double weight;
 
-
     public FishingRod(){}
 
     public FishingRod(String model, String type, double price, double length){
